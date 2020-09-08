@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const jsdocConfig = require('../config/jsdoc');
+const authRouter = require('./auth/auth')
 const dotenv = require('dotenv');
 const config_result = dotenv.config();
 if (process.env.NODE_ENV != 'production' && config_result.error) {
@@ -49,6 +50,7 @@ app.use(cookieParser());
 
 // application routes
 app.use('/', indexRouter);
+app.use('/login', authRouter)
 app.use(['/profile', '/profiles'], profileRouter);
 app.use('/data', dsRouter);
 
