@@ -1,7 +1,3 @@
-var dotenv = require('dotenv');
-dotenv.config({ path: '../.env' });
-// const pgConnection = "postgres://cxssyouz:bYywWXo757yDfrDrTSQnsyNBQfrngqpF@otto.db.elephantsql.com:5432/cxssyouz";
-
 module.exports = {
   development: {
     client: 'pg',
