@@ -7,12 +7,9 @@ const helmet = require('helmet');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const jsdocConfig = require('../config/jsdoc');
-const authRouter = require('./auth/auth')
-const dotenv = require('dotenv');
-const config_result = dotenv.config();
-if (process.env.NODE_ENV != 'production' && config_result.error) {
-  throw config_result.error;
-}
+
+const session = require('express-session');
+const { ExpressOIDC } = require('@okta/oidc-middleware');
 
 const swaggerSpec = swaggerJSDoc(jsdocConfig);
 const swaggerUIOptions = {
@@ -25,6 +22,27 @@ const profileRouter = require('./profile/profileRouter');
 const dsRouter = require('./dsService/dsRouter');
 
 const app = express();
+const oidc = new ExpressOIDC({
+  issuer: process.env.OKTA_URL_ISSUER,
+  client_id: process.env.OKTA_CLIENT_ID,
+  client_secret: process.env.OKTA_CLIENT_SECRET,
+  appBaseUrl: process.env.BASE_URL,
+  loginRedirectUri: `${process.env.BASE_URL}/callback`,
+  scope: 'openid profile',
+  routes: {
+    loginCallback: {
+      path: '/callback'
+    },
+  }
+});
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: true,
+  saveUninitialized: false
+}));
+// This will be needed for protected routes
+app.use(oidc.router);
 
 process.on('unhandledRejection', (reason, p) => {
   console.error('Unhandled Rejection at: Promise', p, 'reason:', reason);
@@ -50,7 +68,6 @@ app.use(cookieParser());
 
 // application routes
 app.use('/', indexRouter);
-app.use('/login', authRouter)
 app.use(['/profile', '/profiles'], profileRouter);
 app.use('/data', dsRouter);
 
@@ -81,4 +98,4 @@ app.use(function (err, req, res, next) {
   next(err);
 });
 
-module.exports = app;
+module.exports = { app, oidc };
