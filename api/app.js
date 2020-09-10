@@ -21,6 +21,11 @@ const indexRouter = require('./index/indexRouter');
 const profileRouter = require('./profile/profileRouter');
 const dsRouter = require('./dsService/dsRouter');
 
+
+const cityRouter = require('../routers/cities-router.js');
+
+
+
 const app = express();
 const oidc = new ExpressOIDC({
   issuer: process.env.OKTA_URL_ISSUER,
@@ -71,6 +76,12 @@ app.use('/', indexRouter);
 app.use(['/profile', '/profiles'], profileRouter);
 app.use('/data', dsRouter);
 
+app.use('/cities', cityRouter);
+
+
+
+
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -97,5 +108,9 @@ app.use(function (err, req, res, next) {
   }
   next(err);
 });
+
+
+
+
 
 module.exports = { app, oidc };
