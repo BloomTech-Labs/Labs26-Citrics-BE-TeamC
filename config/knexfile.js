@@ -1,3 +1,8 @@
+var dotenv = require('dotenv');
+dotenv.config({ path: '../.env' });
+
+
+
 module.exports = {
   development: {
     client: 'pg',
