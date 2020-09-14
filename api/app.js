@@ -8,6 +8,8 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const jsdocConfig = require('../config/jsdoc');
 
+const db = require('./data/dataModel')
+
 const session = require('express-session');
 const { ExpressOIDC } = require('@okta/oidc-middleware');
 
@@ -21,10 +23,7 @@ const indexRouter = require('./index/indexRouter');
 const profileRouter = require('./profile/profileRouter');
 const dsRouter = require('./dsService/dsRouter');
 
-
 const cityRouter = require('../routers/cities-router.js');
-
-
 
 const app = express();
 const oidc = new ExpressOIDC({
@@ -78,10 +77,16 @@ app.use('/data', dsRouter);
 
 app.use('/cities', cityRouter);
 
-
-
-
-
+app.get('/all', async (req, res) => {
+  try {
+    const data = db.findAll()
+    res.json(data)
+  }
+  catch (err) {
+    console.log(err)
+    res.status(500).json({ message: 'Error while getting data', err })
+  }
+})
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -108,9 +113,5 @@ app.use(function (err, req, res, next) {
   }
   next(err);
 });
-
-
-
-
 
 module.exports = { app, oidc };
