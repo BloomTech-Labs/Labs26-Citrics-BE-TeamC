@@ -14,7 +14,35 @@ exports.up = (knex) => {
       tbl.string('location').notNullable().unique();
     })
 
-    .createTable('info', tbl => {
+    .createTable('info_winter', tbl => {
+      tbl.increments();
+      tbl.string('maxtempF').notNullable();
+      tbl.string('FeelsLikeF').notNullable();
+      tbl.string('mintempF').notNullable();
+      tbl.string('maxtempC').notNullable();
+      tbl.string('FeelsLikeC').notNullable();
+      tbl.string('mintempC').notNullable();
+      tbl.string('precipMM').notNullable();
+      tbl.string('totalSnow_cm').notNullable();
+      tbl.string('uvIndex').notNullable();
+      tbl.string('DewPointC').notNullable();
+      tbl.string('HeatIndexC').notNullable();
+      tbl.string('WindChillC').notNullable();
+      tbl.string('WindGustKmph').notNullable();
+      tbl.string('cloudcover').notNullable();
+      tbl.string('humidity').notNullable();
+      tbl.string('pressure').notNullable();
+      tbl.string('visibility').notNullable();
+      tbl.string('windspeedKmph').notNullable();
+
+      tbl.integer('location_id')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('location'); // must defines what table it refers to
+    })
+
+    .createTable('info_summer', tbl => {
       tbl.increments();
       tbl.string('maxtempF').notNullable();
       tbl.string('FeelsLikeF').notNullable();
@@ -46,7 +74,8 @@ exports.up = (knex) => {
 
 exports.down = (knex) => {
   return knex.schema
-    .dropTableIfExists('info')
+    .dropTableIfExists('info_winter')
+    .dropTableIfExists('info_summer')
     .dropTableIfExists('location')
     .dropTableIfExists('profiles')
     ;
