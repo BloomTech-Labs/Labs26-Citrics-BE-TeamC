@@ -1,46 +1,45 @@
 const router = require('express').Router();
 const Cities = require('../models/cities-model.js');
-
+// const db = require('../api/data/dataModel')
 
 // gets all cities in the app
 
-router.get('/', (req, res) => {
-    Cities.find()
-        .then(city => {
-            res.status(200).json(city)
-        })
-        .catch(err => {
-            res.status(500).json({
-                message: 'Unable to retrieve cities list'
-            })
-        })
-});
+// router.get('/', (req, res) => {
+//     Cities.find()
+//         .then(city => {
+//             res.status(200).json(city)
+//         })
+//         .catch(err => {
+//             res.status(500).json({
+//                 message: 'Unable to retrieve cities list'
+//             })
+//         })
+// });
 
-router.get('/all', (req, res) => {
-    Cities.findAll()
-        .then(city => {
-            res.status(200).json(city)
-        })
-        .catch(err => {
-            res.status(500).json({
-                message: 'error retrieving locations'
-            })
-        })
+// GET all cities
+router.get('/', (req, res) => {
+  Cities.findAll()
+    .then(city => {
+      res.status(200).json(city)
+    })
+    .catch(err => {
+      res.status(500).json({
+        message: 'error retrieving locations', err
+      })
+    })
 })
 
-
-// router.get('/all', async (req, res) => {
-//     try {
-//         const data = db.findAll()
-//         res.json(data)
-//     }
-//     catch (err) {
-//         console.log(err)
-//         res.status(500).json({ message: 'Error while getting data', err })
-//     }
-// })
-
-//gets city by id 
+// GET city by id
+router.get('/:id', async (req, res) => {
+  const { id } = req.params
+  const city = await Cities.findById(id)
+  try {
+    res.status(200).json(city)
+  }
+  catch (err) {
+    res.status(500).json({ message: 'Error while getting city', err })
+  }
+})
 
 // router.get('/:id', (req, res) => {
 //     const { id } = req.params;
