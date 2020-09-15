@@ -1,12 +1,11 @@
 const db = require("../data/db-config.js");
 
-
 module.exports = {
   find,
   findByUser,
   findById,
-  findAll
-
+  findAllSummer,
+  findAllWinter,
 };
 
 // get all cities 
@@ -15,7 +14,6 @@ function find() {
   return db('cities');
 };
 
-
 // this can be to check all cities saved by user in their profile
 
 function findByUser(user_id) {
@@ -23,18 +21,25 @@ function findByUser(user_id) {
     .where({ user_id })
 }
 
-// GET all cities
-function findAll() {
+// GET all data for summer
+function findAllSummer() {
   return db('location')
-    .join('info as i', 'i.location_id', 'location.id')
-    .select('location.location', 'i.*')
+    .join('info_summer as is', 'is.location_id', 'location.id')
+    .select('location.location', 'is.*')
 }
 
-// GET city by id
+// GET all data for winter
+function findAllWinter() {
+  return db('location')
+    .join('info_winter as iw', 'iw.location_id', 'location.id')
+    .select('location.location', 'iw.*')
+}
+
+// GET city by id for WINTER table
 function findById(id) {
   return db('location')
-    .join('info as i', 'i.location_id', 'location.id')
+    .join('info_winter', 'info_winter.location_id', 'location.id')
     .where('location.id', id)
-    .select('location.location', 'i.*')
+    .select('location.location', 'info_winter.*')
     .first()
 };
