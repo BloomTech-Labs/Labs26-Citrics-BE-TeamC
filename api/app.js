@@ -8,8 +8,6 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const jsdocConfig = require('../config/jsdoc');
 
-const db = require('./data/dataModel')
-
 const session = require('express-session');
 const { ExpressOIDC } = require('@okta/oidc-middleware');
 

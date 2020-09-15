@@ -1,9 +1,9 @@
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('info').truncate()
+  return knex('info_winter').del()
     .then(function () {
       // Inserts seed entries
-      return knex('info').insert([
+      return knex('info_winter').insert([
         {
           maxtempF: 29.48201754385964,
           FeelsLikeF: 19.660964912280686,

@@ -6,302 +6,252 @@ exports.seed = function (knex) {
       return knex('location').insert([
         {
           location:
-            `"Juneau",
-            "AK"`
+            `Juneau, AK`
           ,
         },
         {
           location:
-            `"Montgomery",
-            "AL"`
+            `Montgomery, AL`
           ,
         },
         {
           location:
-            `"Little Rock",
-            "AR"`
+            `Little Rock, AR`
           ,
         },
         {
           location:
-            `"Phoenix",
-            "AZ"`
+            `Phoenix, AZ`
           ,
         },
         {
           location:
-            `"Sacramento",
-            "CA"`
+            `Sacramento, CA`
           ,
         },
         {
           location:
-            `"Denver",
-            "CO"`
+            `Denver, CO`
           ,
         },
         {
           location:
-            `"Hartford",
-            "CT"`
+            `Hartford, CT`
           ,
         },
         {
           location:
-            `"Dover",
-            "DE"`
+            `Dover, DE`
           ,
         },
         {
           location:
-            `"Tallahassee",
-            "FL"`
+            `Tallahassee, FL`
           ,
         },
         {
           location:
-            `"Atlanta",
-            "GA"`
+            `Atlanta, GA`
           ,
         },
         {
           location:
-            `"Honolulu",
-            "HI"`
+            `Honolulu, HI`
           ,
         },
         {
           location:
-            `"Des Moines",
-            "IA"`
+            `Des Moines, IA`
           ,
         },
         {
           location:
-            `"Boise",
-            "ID"`
+            `Boise, ID`
           ,
         },
         {
           location:
-            `"Springfield",
-            "IL"`
+            `Springfield, IL`
           ,
         },
         {
           location:
-            `"Indianapolis",
-            "IN"`
+            `Indianapolis, IN`
           ,
         },
         {
           location:
-            `"Topeka",
-            "KS"`
+            `Topeka, KS`
           ,
         },
         {
           location:
-            `"Frankfort",
-            "KY"`
+            `Frankfort, KY`
           ,
         },
         {
           location:
-            `"Baton Rouge",
-            "LA"`
+            `Baton Rouge, LA`
           ,
         },
         {
           location:
-            `"Boston",
-            "MA"`
+            `Boston, MA`
           ,
         },
         {
           location:
-            `"Annapolis",
-            "MD"`
+            `Annapolis, MD`
           ,
         },
         {
           location:
-            `"Augusta",
-            "ME"`
+            `Augusta, ME`
           ,
         },
         {
           location:
-            `"Lansing",
-            "MI"`
+            `Lansing, MI`
           ,
         },
         {
           location:
-            `"Saint Paul",
-            "MN"`
+            `Saint Paul, MN`
           ,
         },
         {
           location:
-            `"Jefferson City",
-            "MO"`
+            `Jefferson City, MO`
           ,
         },
         {
           location:
-            `"Jackson",
-            "MS"`
+            `Jackson, MS`
           ,
         },
         {
           location:
-            `"Helena",
-            "MT"`
+            `Helena, MT`
           ,
         },
         {
           location:
-            `"Raleigh",
-            "NC"`
+            `Raleigh, NC`
           ,
         },
         {
           location:
-            `"Bismarck",
-            "ND"`
+            `Bismarck, ND`
           ,
         },
         {
           location:
-            `"Lincoln",
-            "NE"`
+            `Lincoln, NE`
           ,
         },
         {
           location:
-            `"Concord",
-            "NH"`
+            `Concord, NH`
           ,
         },
         {
           location:
-            `"Trenton",
-            "NJ"`
+            `Trenton, NJ`
           ,
         },
         {
           location:
-            `"Santa Fe",
-            "NM"`
+            `Santa Fe, NM`
           ,
         },
         {
           location:
-            `"Carson City",
-            "NV"`
+            `Carson City, NV`
           ,
         },
         {
           location:
-            `"Albany",
-            "NY"`
+            `Albany, NY`
           ,
         },
         {
           location:
-            `"Columbus",
-            "OH"`
+            `Columbus, OH`
           ,
         },
         {
           location:
-            `"Oklahoma City",
-            "OK"`
+            `Oklahoma City, OK`
           ,
         },
         {
           location:
-            `"Salem",
-            "OR"`
+            `Salem, OR`
           ,
         },
         {
           location:
-            `"Harrisburg",
-            "PA"`
+            `Harrisburg, PA`
           ,
         },
         {
           location:
-            `"Providence",
-            "RI"`
+            `Providence, RI`
           ,
         },
         {
           location:
-            `"Columbia",
-            "SC"`
+            `Columbia, SC`
           ,
         },
         {
           location:
-            `"Pierre",
-            "SD"`
+            `Pierre, SD`
           ,
         },
         {
           location:
-            `"Nashville",
-            "TN"`
+            `Nashville, TN`
           ,
         },
         {
           location:
-            `"Austin",
-            "TX"`
+            `Austin, TX`
           ,
         },
         {
           location:
-            `"Salt Lake City",
-            "UT"`
+            `Salt Lake City, UT`
           ,
         },
         {
           location:
-            `"Richmond",
-            "VA"`
+            `Richmond, VA`
           ,
         },
         {
           location:
-            `"Montpelier",
-            "VT"`
+            `Montpelier, VT`
           ,
         },
         {
           location:
-            `"Olympia",
-            "WA"`
+            `Olympia, WA`
           ,
         },
         {
           location:
-            `"Madison",
-            "WI"`
+            `Madison, WI`
           ,
         },
         {
           location:
-            `"Charleston",
-            "WV"`
+            `Charleston, WV`
           ,
         },
         {
           location:
-            `"Cheyenne",
-            "WY"`
+            `Cheyenne, WY`
           ,
         }
       ]);
