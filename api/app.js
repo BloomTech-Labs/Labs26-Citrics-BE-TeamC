@@ -77,16 +77,7 @@ app.use('/data', dsRouter);
 
 app.use('/cities', cityRouter);
 
-app.get('/all', async (req, res) => {
-  try {
-    const data = db.findAll()
-    res.json(data)
-  }
-  catch (err) {
-    console.log(err)
-    res.status(500).json({ message: 'Error while getting data', err })
-  }
-})
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
