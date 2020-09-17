@@ -20,7 +20,7 @@ exports.seed = function (knex) {
           location:
             `Little Rock, AR`
           ,
-          image: ''
+          image: 'https://www.addictioncenter.com/app/uploads/2018/10/LittleRock.jpeg'
         },
         {
           location:
@@ -74,7 +74,7 @@ exports.seed = function (knex) {
           location:
             `Des Moines, IA`
           ,
-          image: ''
+          image: 'https://growlermag-media.s3.amazonaws.com/wp-content/uploads/20180321103717/Des-Moines-Photo-by-Jason-Mrachina-Flickr-Featured-Image.jpg'
         },
         {
           location:
@@ -92,13 +92,13 @@ exports.seed = function (knex) {
           location:
             `Indianapolis, IN`
           ,
-          image: ''
+          image: 'https://a.cdn-hotels.com/gdcs/production140/d372/89e4bb5c-3362-43a3-9e01-da5a9f5d0b66.jpg'
         },
         {
           location:
             `Topeka, KS`
           ,
-          image: ''
+          image: 'https://villagetours.net/lmg-cms/wp-content/uploads/2019/08/topeka-ks.jpg'
         },
         {
           location:
@@ -110,7 +110,7 @@ exports.seed = function (knex) {
           location:
             `Baton Rouge, LA`
           ,
-          image: ''
+          image: 'https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_700,q_50,w_1600/v1/clients/batonrouge/downtown_876e3fff-5900-49e8-8f87-b18752269302.jpg'
         },
         {
           location:
@@ -158,7 +158,7 @@ exports.seed = function (knex) {
           location:
             `Helena, MT`
           ,
-          image: ''
+          image: 'https://ap.rdcpix.com/f25e9af8207649290be63ccafad8fb9bl-m422820908xd-w1020_h770_q80.jpg'
         },
         {
           location:
@@ -176,13 +176,13 @@ exports.seed = function (knex) {
           location:
             `Lincoln, NE`
           ,
-          image: ''
+          image: 'https://www.addictionresource.net/wp-content/uploads/2020/02/lincoln-nebraska-drug-rehab-options.jpg'
         },
         {
           location:
             `Concord, NH`
           ,
-          image: ''
+          image: 'https://magazine.northeast.aaa.com/wp-content/uploads/2019/01/things-to-do-in-concord-new-hampshire-1-640x423.jpg'
         },
         {
           location:
@@ -206,103 +206,103 @@ exports.seed = function (knex) {
           location:
             `Albany, NY`
           ,
-          image: ''
+          image: 'https://res.cloudinary.com/simpleview/image/upload/v1506702103/clients/albany/banner_carousel_img_01_0fb5fe76-215f-4a7b-8246-641dac6a0d01.jpg'
         },
         {
           location:
             `Columbus, OH`
           ,
-          image: ''
+          image: 'https://cdn.justluxe.com/articles/images/news/15671742752872.jpg'
         },
         {
           location:
             `Oklahoma City, OK`
           ,
-          image: ''
+          image: 'https://www.okcchamber.com/clientuploads/IMAGES/Site%20Images/forwardokc_banner.jpg'
         },
         {
           location:
             `Salem, OR`
           ,
-          image: ''
+          image: 'https://cdn.thecrazytourist.com/wp-content/uploads/2019/03/ccimage-shutterstock_1331211557.jpg'
         },
         {
           location:
             `Harrisburg, PA`
           ,
-          image: ''
+          image: 'https://www.breweriesinpa.com/wp-content/uploads/2019/09/Harrisburg-Street.jpeg'
         },
         {
           location:
             `Providence, RI`
           ,
-          image: ''
+          image: 'https://specials-images.forbesimg.com/imageserve/967099380/960x0.jpg?cropX1=0&cropX2=7360&cropY1=378&cropY2=4516'
         },
         {
           location:
             `Columbia, SC`
           ,
-          image: ''
+          image: 'https://colatoday.6amcity.com/wp-content/uploads/sites/5/2020/05/cinematic.aerials_95763278_153168172877684_2838907117486367463_n-965x545.jpg'
         },
         {
           location:
             `Pierre, SD`
           ,
-          image: ''
+          image: 'https://mk0xituxemauaaa56cm7.kinstacdn.com/wp-content/uploads/2019/03/GettyImages-163852169.jpg'
         },
         {
           location:
             `Nashville, TN`
           ,
-          image: ''
+          image: 'https://www.tripsavvy.com/thmb/aLkzXa1Ye1CDoPc83C8AEQG9jq0=/3437x2578/smart/filters:no_upscale()/nashville-skyline-531963907-59d2c59603f4020011732da5.jpg'
         },
         {
           location:
             `Austin, TX`
           ,
-          image: ''
+          image: 'https://res.cloudinary.com/culturemap-com/image/upload/ar_4:3,c_fill,g_faces:center,w_1200/v1548256026/photos/288314_original.jpg'
         },
         {
           location:
             `Salt Lake City, UT`
           ,
-          image: ''
+          image: 'https://www.nbc12.com/resizer/YmLHg5erXkMl1b00qIQ_WXiLukQ=/0x190:3880x2130/3880x1940/arc-anglerfish-arc2-prod-raycom.s3.amazonaws.com/public/TCLPKUBKA5ANDBWMANB657J4IQ.jpg'
         },
         {
           location:
             `Richmond, VA`
           ,
-          image: ''
+          image: 'https://www.nbc12.com/resizer/YmLHg5erXkMl1b00qIQ_WXiLukQ=/0x190:3880x2130/3880x1940/arc-anglerfish-arc2-prod-raycom.s3.amazonaws.com/public/TCLPKUBKA5ANDBWMANB657J4IQ.jpg'
         },
         {
           location:
             `Montpelier, VT`
           ,
-          image: ''
+          image: 'https://previews.123rf.com/images/sepavo/sepavo1710/sepavo171000057/88199272-montpelier-vermont-usa-town-skyline-in-autumn-.jpg'
         },
         {
           location:
             `Olympia, WA`
           ,
-          image: ''
+          image: 'https://gravislaw.com/wp-content/uploads/2018/10/olympia-water-1024x682.jpg'
         },
         {
           location:
             `Madison, WI`
           ,
-          image: ''
+          image: 'https://media2.govtech.com/images/940*611/shutterstock_678378805.jpg'
         },
         {
           location:
             `Charleston, WV`
           ,
-          image: ''
+          image: 'https://i.insider.com/577d0e6bdd08956b7b8b45d2?width=1100&format=jpeg&auto=webp'
         },
         {
           location:
             `Cheyenne, WY`
           ,
-          image: ''
+          image: 'https://i.ytimg.com/vi/dMm5eujgF7k/maxresdefault.jpg'
         }
       ]);
     });
