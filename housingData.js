@@ -44,4 +44,8 @@ const KY = '{\"KY\": {\"Owensboro, KY\": \"45,915.0\", \"Bowling Green, KY\": \"
 const RI = '{\"RI\": {\"Warwick, RI\": \"158,813.0\", \"Cranston, RI\": \"192,582.0\", \"Providence, RI\": \"203,150.0\"}}';
 const NH = '{\"NH\": {\"Nashua, NH\": \"140,509.0\", \"Manchester, NH\": \"122,716.0\"}}';
 
-module.exports = { AL, AZ, AR, CA, CO, CT, DC, FL, GA, ID, IL, IN, IA, KS, KY, LA, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, WA, WI, WY };
+module.exports = {
+    AL, AZ, AR, CA, CO, CT, DC, FL, GA, ID, IL, IN, IA, KS, KY, LA,
+    MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH,
+    OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, WA, WI, WY
+};

@@ -67,7 +67,9 @@ function mrParser(string) {
     }
 }
 
-let states = [AL, AZ, AR, CA, CO, CT, DC, FL, GA, ID, IL, IN, IA, KS, KY, LA, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, WA, WI, WY];
+let states = [AL, AZ, AR, CA, CO, CT, DC, FL, GA, ID, IL, IN, IA, KS, KY, LA, MD, MA, MI,
+    MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, RI, SC,
+    SD, TN, TX, UT, VA, WA, WI, WY];
 
 
 
