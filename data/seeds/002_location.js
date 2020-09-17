@@ -8,7 +8,7 @@ exports.seed = function (knex) {
           location:
             `Juneau, AK`
           ,
-          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Alabama_State_Capitol%2C_Montgomery%2C_West_view_20160713_1.jpg/2560px-Alabama_State_Capitol%2C_Montgomery%2C_West_view_20160713_1.jpg'
+          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Parque_Eagle_River%2C_Anchorage%2C_Alaska%2C_Estados_Unidos%2C_2017-09-01%2C_DD_02.jpg/2880px-Parque_Eagle_River%2C_Anchorage%2C_Alaska%2C_Estados_Unidos%2C_2017-09-01%2C_DD_02.jpg'
         },
         {
           location:
