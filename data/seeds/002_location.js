@@ -98,7 +98,7 @@ exports.seed = function (knex) {
           location:
             `Topeka, KS`
           ,
-          image: 'https://villagetours.net/lmg-cms/wp-content/uploads/2019/08/topeka-ks.jpg'
+          image: 'https://www.ed2go.com/Includes/geo/images/CityBanner/topeka-ks.jpg'
         },
         {
           location:
@@ -254,7 +254,7 @@ exports.seed = function (knex) {
           location:
             `Nashville, TN`
           ,
-          image: 'https://www.tripsavvy.com/thmb/aLkzXa1Ye1CDoPc83C8AEQG9jq0=/3437x2578/smart/filters:no_upscale()/nashville-skyline-531963907-59d2c59603f4020011732da5.jpg'
+          image: 'https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/2/nashville-sunset-jonathan-ross.jpg'
         },
         {
           location:
