@@ -25,14 +25,14 @@ function findByUser(user_id) {
 function findAllSummer() {
   return db('location')
     .join('info_summer as is', 'is.location_id', 'location.id')
-    .select('location.location', 'is.*')
+    .select('location.location', 'location.image', 'is.*')
 }
 
 // GET all data for winter
 function findAllWinter() {
   return db('location')
     .join('info_winter as iw', 'iw.location_id', 'location.id')
-    .select('location.location', 'iw.*')
+    .select('location.location', 'location.image', 'iw.*')
 }
 
 // GET city by id for WINTER table
@@ -40,6 +40,6 @@ function findById(id) {
   return db('location')
     .join('info_winter', 'info_winter.location_id', 'location.id')
     .where('location.id', id)
-    .select('location.location', 'info_winter.*')
+    .select('location.location', 'location.image', 'info_winter.*')
     .first()
 };
