@@ -32,18 +32,8 @@ const Cities = require('../models/cities-model.js');
 
 
 
-// router.get('/', async (req, res) => {
-//     const cities = await Cities.findAllWinter()
-//     try {
-//         res.status(200).json(cities)
-//     }
-//     catch (err) {
-//         res.status(500).json({ message: 'Error while getting city', err })
-//     }
-// })
-
 router.get('/', async (req, res) => {
-    const cities = await Cities.findAllWinterAndSummer()
+    const cities = await Cities.findAllWinter()
     try {
         res.status(200).json(cities)
     }
@@ -51,6 +41,16 @@ router.get('/', async (req, res) => {
         res.status(500).json({ message: 'Error while getting city', err })
     }
 })
+
+// router.get('/', async (req, res) => {
+//     const cities = await Cities.findAllWinterAndSummer()
+//     try {
+//         res.status(200).json(cities)
+//     }
+//     catch (err) {
+//         res.status(500).json({ message: 'Error while getting city', err })
+//     }
+// })
 
 
 // GET city by id
