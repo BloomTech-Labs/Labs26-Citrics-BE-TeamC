@@ -22,6 +22,7 @@ const profileRouter = require('./profile/profileRouter');
 const dsRouter = require('./dsService/dsRouter');
 
 const cityRouter = require('../routers/cities-router.js');
+const housingRouter = require('../routers/housing-router.js');
 
 const app = express();
 const oidc = new ExpressOIDC({
@@ -74,6 +75,7 @@ app.use(['/profile', '/profiles'], profileRouter);
 app.use('/data', dsRouter);
 
 app.use('/cities', cityRouter);
+app.use('/housing', housingRouter);
 
 
 // catch 404 and forward to error handler

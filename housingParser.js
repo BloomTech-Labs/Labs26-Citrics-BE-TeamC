@@ -32,11 +32,13 @@ function mrParser(string) {
         let x = obj2Keys[i].split(',').join('')
         x = x.slice(0, x.length - 2);
 
-        newArr.push(x)
+        newArr.push(x.slice(0, -1))
 
     }
 
-    //console.log(newArr)
+
+
+    // console.log(newArr)
 
     let obj2Values = Object.values(obj2)
 
