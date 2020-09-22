@@ -1,6 +1,6 @@
 const { AL, AZ, AR, CA, CO, CT, DC, FL, GA, ID, IL, IN, IA, KS, KY, LA, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, WA, WI, WY } = require('./housingData')
 
-//there is no AK, AS, DE, FM, GU, HI, ME, MH, VT, VI, WV info
+//there is no AK, DE, HI, ME, VT, WV info
 
 function mrParser(string) {
     let replaceStr = string.replace(/\s+/g, ' ');
