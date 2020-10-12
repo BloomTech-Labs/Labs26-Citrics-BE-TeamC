@@ -12,7 +12,7 @@ module.exports = {
 // get all cities 
 
 function find() {
-  return db('location').limit(9)
+  return db('location')
 };
 
 // this can be to check all cities saved by user in their profile
