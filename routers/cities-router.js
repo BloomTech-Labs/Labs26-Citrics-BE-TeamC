@@ -29,9 +29,33 @@ const Cities = require('../models/cities-model.js');
 // })
 
 router.get('/', async (req, res) => {
+  const page = parseInt(req.query.page)
+  const limit = parseInt(req.query.limit)
+
+  const startIndex = (page - 1) * limit
+  const endIndex = page * limit
+
+
   const cities = await Cities.find()
+  const data = {}
+
+  if (endIndex < cities.length) {
+    data.next = {
+      page: page + 1,
+      limit: limit
+    }
+  }
+
+  if (startIndex > 0) {
+    data.previous = {
+      page: page - 1,
+      limit: limit
+    }
+  }
+
+  data.data = cities.slice(startIndex, endIndex)
   try {
-    res.status(200).json(cities)
+    res.status(200).json(data)
   }
   catch (err) {
     res.status(500).json({ message: 'Error while getting city', err })
