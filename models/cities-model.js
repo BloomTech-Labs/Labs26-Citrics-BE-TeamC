@@ -12,13 +12,13 @@ module.exports = {
 // get all cities 
 
 function find() {
-  return db('cities');
+  return db('location').limit(9)
 };
 
 // this can be to check all cities saved by user in their profile
 
 function findByUser(user_id) {
-  return db('cities')
+  return db('location')
     .where({ user_id })
 }
 
@@ -27,6 +27,7 @@ function findAllSummer() {
   return db('location')
     .join('info_summer as is', 'is.location_id', 'location.id')
     .select('location.location', 'is.*')
+    .limit(2)
 }
 
 // GET all data for winter
@@ -34,6 +35,7 @@ function findAllWinter() {
   return db('location')
     .join('info_winter as iw', 'iw.location_id', 'location.id')
     .select('location.location', 'iw.*')
+    .limit(2)
 }
 
 // work in progress
